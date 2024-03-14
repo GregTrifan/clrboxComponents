@@ -1,7 +1,7 @@
 name: Node.js Package
 
 permissions:
-  contents: read|write
+  contents: write
 
 on:
   push:
