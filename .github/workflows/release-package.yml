@@ -1,5 +1,8 @@
 name: Node.js Package
 
+permissions:
+  contents: read|write
+
 on:
   push:
     branches:
@@ -37,5 +40,5 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           npm version  --new-version 1.1.$((1000+GITHUB_RUN_NUMBER)) --no-git-tag-version
           git add .
-          git commit -m "updated package version to $(tag) [ci skip]"
+          git commit -m "updated package version to 1.1.$((1000+GITHUB_RUN_NUMBER)) [ci skip]"
           git push 
